@@ -140,11 +140,11 @@ header {
     background: white;
     margin-top: 10px;
     margin-bottom: 10px;
-	padding: 2% 13%;
+	padding: 2% 11%;
 	font-size: 17px;
 	border: 1px solid black;
     cursor: pointer;
-    width: 50%;
+    width: 47%;
   }
   
   .cta .cta-text button:hover {
