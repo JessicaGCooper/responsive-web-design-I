@@ -71,17 +71,11 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-.container * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 1px solid grey;
-}
 
 .container {
-	width: 70%;
+	width: 80%;
 	/* TB LR */
-    margin: 15% 15%;
+    margin: 10% 10%;
   }
   
   /* header */
@@ -89,15 +83,15 @@ h1, h2, h3, h4, h5 {
 
 header {
 	display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
   header nav {
 	width: 80%;
     display: flex;
     justify-content: space-around;
-    margin-right: 5%
+    margin-right: 5%;
   }
 
   header img {
@@ -108,8 +102,8 @@ header {
   }
   
   header nav a {
-	font-size: 16px;
-	color: gray;
+    font-size: 16px;
+    color: gray;
     text-decoration: none;
   }
   
@@ -128,33 +122,35 @@ header {
   /* cta */
   
   .cta {
-	display: flex;
+	  display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
   }
 
   .cta-text {
-	display: flex;
-	flex-flow: wrap column;
-	align-items: center;
+	  display: flex;
+	  flex-flow: wrap column;
+	  align-items: center;
     font-size: 77px;
     font-size: 6vw;
     width: 40%;
     height: 40%;
+    margin-bottom: 60px;
   }
 
   .cta-text h1 {
-    margin-bottom: 1%;
+    margin-bottom: 2%;
   }
   
   .cta .cta-text button {
     background: white;
     margin-top: 10px;
     margin-bottom: 10px;
-	padding: 2% 11%;
-	font-size: 1rem;
-	border: 1px solid black;
+	  padding: 2% 11%;
+    font-size: 15px;
+    font-size: 1vw;
+	  border: 1px solid black;
     cursor: pointer;
     width: 47%;
   }
@@ -169,13 +165,14 @@ header {
     margin-right: 5%;
     width: 40%;
     height: 40%;
-    margin-top: 80px; 
+    margin-top: 80px;
+    margin-bottom: 20px; 
 }
   
   .main-content {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 40px;
+	  display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
     padding-top: 39px;
     justify-content: center;
   }
@@ -196,18 +193,18 @@ header {
   
   .bottom-content {
     display: flex;
-	margin-top: 37px;
+	  margin-top: 37px;
     width: 90%;
     border-bottom: 2px solid black;
     padding-bottom: 40px;
   }
 
   .bottom-content .text-content h4, .bottom-content .text-content p {
-    width: 97%;
+    width: 95%;
   }
   
   .contact {
-	margin-top: 30px;
+	  margin-top: 30px;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -228,97 +225,227 @@ header {
   }
   /********* MEDIA QUERIES FOR HOME PAGE **********/
 
+
+  /********* 800PX **********/
   @media screen and (max-width: 800px) {
-  
-  body {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .container {
-    width: 100%;  
-    margin-right: 5%;
-    margin-left: 5%;
+    
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .container {
+      width: 100%;  
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+
+    header {
+      flex-direction: column-reverse;
+      align-items: center;
+      align-content: center;
+    }
+
+    header nav {
+      width: 97%;
+      margin: 0px;
+      margin-right: 3%;
+    }
+
+    header nav a {
+      font-size: 15px;
+      letter-spacing: 1.1px;
+    }
+
+    header img {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 20px;
+      transform: scale(1.5);
+    }
+    
+    .cta {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .cta-text {
+      width: 50%; 
+      margin: 0% 0%;
+      font-size: 75px;
+      font-size: 8vw;
+      margin-top: 60px;
+    }
+
+    .cta-text h1 {
+        margin: 0;
+    }
+
+    .cta img { 
+      display: none;
+    }
+
+    .cta .cta-text button {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding: 2% 15%;
+      font-size: 15px;
+      font-size: 2vw;
+      width: 55%;
+    }
+
+    .main-content {
+      margin-top: 40px;
+      padding-top: 0px;
+    }
+
+    .top-content .text-content p {
+      width: 95%
+    }
+
+    .main-content .middle-img {
+      margin-top: 45px;
+    }
+
+    .bottom-content {
+      display: flex;
+      margin-top: 37px;
+      width: 90%;
+      border-bottom: 2px solid black;
+      padding-bottom: 40px;
+    }
+
+    .bottom-content .text-content p {
+      width: 90%;
+    }
+    
   }
 
-  header {
-    flex-direction: column-reverse;
-    align-items: center;
-    align-content: center;
-  }
+  /********* 500PX **********/
+  @media (max-width: 500px) {
+     
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .container {
+      width: 90%;
+      height: auto;  
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+      
+    header {
+      display: flex;
+      width: 100%;
+      height: auto;
+    }
+      
+    header nav {
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+    }
+      
+    header nav a {
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-bottom: 1px solid gray;
+      width: 100%;
+      text-align: center;
+      padding: 5% 0;
+    }
 
-  header nav {
-    width: 100%;
-    margin: 0px;
-  }
-
-  header nav a {
-    font-size: 14px
-  }
-
-  header img {
-    margin-top: 0px;
-    margin-bottom: 40px;
-    transform: scale(1.5);
-  }
-  
-  .cta {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .cta-text {
-    width: 50%; 
-    margin: 0% 0%;
-    font-size: 75px;
-    margin-top: 60px;
-  }
-
-  .cta-text h1 {
+    .top-nav {
+      border-top: 1px solid gray;
+      margin-top: 15px;
+    }
+      
+    header img {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 20px;
+      transform: scale(2.75);
+    }
+        
+    .cta {
+      width: 100%;
+      justify-content: center;
+    }
+      
+    .cta-text {
+      width: 76%; 
+      margin: 0% 0%;
+      font-size: 50px;
+      font-size: 14vw;
+      margin-top: 50px;
+    }
+      
+    .cta-text h1 {
       margin: 0;
-  }
+      letter-spacing: 3px;
+    }
+      
+    .cta img { 
+      display: none;
+    }
+      
+    .cta .cta-text button {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      padding: 2% 15%;
+      font-size: 15px;
+      font-size: 3vw;
+      width: 60%;
+    }
+      
+    .top-content{
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      margin-top: 20px;
+      width: 100%;
+      padding: 0px;
+    }
+      
+    .top-content .text-content {
+      padding-top: 60px;
+    }
+      
+    .main-content .middle-img {
+      margin-top: 60px;
+      width: 100%;
+    }
+      
+    .bottom-content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      width: 100%;
+      border-bottom: 2px solid black;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+      
+    .bottom-content .text-content p {
+      width: 100%;
+    }
 
-  .cta img { 
-    display: none;
-  }
+    .bottom-content .text-content {
+      padding-top: 10px;
+      padding-bottom: 50px;
+      width: 100%;
+    }
 
-  .cta .cta-text button {
-    margin-top: 20px;
-    margin-bottom: 30px;
-	padding: 2% 15%;
-	font-size: 15px;
-    width: 55%;
-  }
-
-  .main-content {
-	margin-top: 40px;
-    padding-top: 0px;
-  }
-
-  .top-content .text-content p {
-    width: 95%
-  }
-
-  .main-content .middle-img {
-    margin-top: 45px;
-  }
-
-  .bottom-content {
-    display: flex;
-	margin-top: 37px;
-    width: 90%;
-    border-bottom: 2px solid black;
-    padding-bottom: 40px;
-  }
-
-  .bottom-content .text-content p {
-    width: 90%;
-  }
-  
-
-  }
-
-  @media and screen (max-width: 500px) {
+    .contact {
+      width: 100%;
+      margin: 0px;
+      margin-top: 40px;
+    }
       
   }
 
@@ -374,16 +501,16 @@ header {
   }
 
   .services-text button{
-       margin-top: 14px;
-       margin-bottom: 40px;
-	   padding-top: 10px;
-	   padding-bottom:10px;
-	   padding-left:40px;
-	   padding-right:40px;
-	   font-size: 10px;
-	   border: 1px solid black;
-	   border-radius: 5px;
-	   background: white;
+    margin-top: 14px;
+    margin-bottom: 40px;
+	  padding-top: 10px;
+	  padding-bottom:10px;
+	  padding-left:40px;
+	  padding-right:40px;
+	  font-size: 10px;
+	  border: 1px solid black;
+	  border-radius: 5px;
+	  background: white;
   }
 
   .facts{
@@ -408,6 +535,12 @@ header {
 	list-style-position: inside;
 	padding-top: 15px;
   }
+
+  .container * {
+    
+  }
+
+
 
 
 
