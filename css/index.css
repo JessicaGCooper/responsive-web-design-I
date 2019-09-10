@@ -71,6 +71,13 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
+.container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 1px solid grey;
+}
+
 .container {
 	width: 70%;
 	/* TB LR */
@@ -95,8 +102,9 @@ header {
 
   header img {
    width: 17%;
+   height: 17%;
    margin-top: 25px;
-   margin-right: 5%
+   margin-right: 5%;
   }
   
   header nav a {
@@ -130,18 +138,22 @@ header {
 	display: flex;
 	flex-flow: wrap column;
 	align-items: center;
-	font-size: 77px;
-    margin-top: 120px;
-    width: 40%; 
+    font-size: 77px;
+    font-size: 6vw;
+    width: 40%;
+    height: 40%;
+  }
+
+  .cta-text h1 {
+    margin-bottom: 1%;
   }
   
   .cta .cta-text button {
-    display: flex;
     background: white;
     margin-top: 10px;
     margin-bottom: 10px;
 	padding: 2% 11%;
-	font-size: 17px;
+	font-size: 1rem;
 	border: 1px solid black;
     cursor: pointer;
     width: 47%;
@@ -156,7 +168,8 @@ header {
     margin-left: 3%;
     margin-right: 5%;
     width: 40%;
-    height: 40%
+    height: 40%;
+    margin-top: 80px; 
 }
   
   .main-content {
@@ -178,7 +191,7 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 45px;
-    width: 90%
+    width: 90%;
   }
   
   .bottom-content {
@@ -217,41 +230,95 @@ header {
 
   @media screen and (max-width: 800px) {
   
-  .container {  
-    width: 80%;
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 100%;  
+    margin-right: 5%;
+    margin-left: 5%;
   }
 
   header {
     flex-direction: column-reverse;
     align-items: center;
+    align-content: center;
+  }
+
+  header nav {
+    width: 100%;
+    margin: 0px;
+  }
+
+  header nav a {
+    font-size: 14px
   }
 
   header img {
-      margin-bottom: 20px;
-      transform: scale(1.5);
+    margin-top: 0px;
+    margin-bottom: 40px;
+    transform: scale(1.5);
   }
   
   .cta {
+    width: 100%;
     justify-content: center;
   }
 
   .cta-text {
+    width: 50%; 
     margin: 0% 0%;
+    font-size: 75px;
+    margin-top: 60px;
   }
 
- .cta img { 
+  .cta-text h1 {
+      margin: 0;
+  }
+
+  .cta img { 
     display: none;
   }
 
-  .cta .cta-text {
-	font-size: 77px;
-    margin-top: 120px;
-    width: 40%; 
+  .cta .cta-text button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+	padding: 2% 15%;
+	font-size: 15px;
+    width: 55%;
   }
+
+  .main-content {
+	margin-top: 40px;
+    padding-top: 0px;
+  }
+
+  .top-content .text-content p {
+    width: 95%
+  }
+
+  .main-content .middle-img {
+    margin-top: 45px;
+  }
+
+  .bottom-content {
+    display: flex;
+	margin-top: 37px;
+    width: 90%;
+    border-bottom: 2px solid black;
+    padding-bottom: 40px;
+  }
+
+  .bottom-content .text-content p {
+    width: 90%;
+  }
+  
 
   }
 
-  @media and screen (max-width: 400px) {
+  @media and screen (max-width: 500px) {
       
   }
 
@@ -307,7 +374,8 @@ header {
   }
 
   .services-text button{
-	   margin-top: 14px;
+       margin-top: 14px;
+       margin-bottom: 40px;
 	   padding-top: 10px;
 	   padding-bottom:10px;
 	   padding-left:40px;
@@ -342,9 +410,4 @@ header {
   }
 
 
-  /*** REMOVE **/
-
-  .container * {
-    
-  }
 
