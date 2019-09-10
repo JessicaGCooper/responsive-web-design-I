@@ -88,10 +88,10 @@ header {
 }
 
   header nav {
-	width: 80%;
+	  width: 75%;
     display: flex;
     justify-content: space-around;
-    margin-right: 5%;
+    margin-right: 3%;
   }
 
   header img {
@@ -173,7 +173,7 @@ header {
 	  display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
-    padding-top: 39px;
+    padding-top: 40px;
     justify-content: center;
   }
   
@@ -199,7 +199,11 @@ header {
     padding-bottom: 40px;
   }
 
-  .bottom-content .text-content h4, .bottom-content .text-content p {
+  .top-content .text-content p {
+    width: 97%;
+  }
+
+  .bottom-content .text-content p {
     width: 95%;
   }
   
@@ -536,9 +540,7 @@ header {
 	padding-top: 15px;
   }
 
-  .container * {
-    
-  }
+
 
 
 
